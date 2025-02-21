@@ -1,56 +1,178 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!DOCTYPE html><html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Caio Andrade Pariz</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #121212;
-            color: #f4f4f4;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(180deg, #003366 0%, #0066cc 50%, #0099ff 100%);
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
             padding: 20px;
+            overflow-x: hidden;
+            position: relative;
+        }
+        .parallax-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            z-index: -2;
+        }
+        .parallax-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: url('https://source.unsplash.com/1600x900/?sky') no-repeat center center/cover;
+            z-index: -3;
+        }
+        .parallax-foreground {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: url('https://source.unsplash.com/1600x900/?mountains') no-repeat center center/cover;
+            z-index: -1;
+            opacity: 0.8;
         }
         .container {
-            max-width: 600px;
-            margin: auto;
-            background: #1e1e1e;
-            padding: 20px;
+            max-width: 900px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            margin-bottom: 50px;
+            color: #333;
+        }
+        .name {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #0066cc;
+        }
+        .job {
+            font-size: 1.2rem;
+            color: #555;
+        }
+        .description {
+            margin: 20px 0;
+            font-size: 1rem;
+            color: #444;
+        }
+        .icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 15px 0;
+        }
+        .icons i {
+            font-size: 1.6rem;
+            color: #0066cc;
+            transition: transform 0.3s ease;
+        }
+        .icons i:hover {
+            transform: scale(1.2);
+        }
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 25px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
+            max-width: 900px;
+            width: 100%;
+            color: #333;
         }
-        h1 {
-            color: #00c853;
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #0066cc;
+            margin-bottom: 15px;
+            text-align: center;
         }
-        p {
-            font-size: 18px;
+        .projects, .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
         }
-        .links a {
-            display: block;
-            margin: 10px 0;
-            color: #00e676;
-            text-decoration: none;
-            font-size: 18px;
+        .project, .timeline-item {
+            background: #cce7ff;
+            padding: 15px;
+            border-radius: 8px;
+            transition: 0.3s;
+            font-size: 1rem;
         }
-        .links a:hover {
-            text-decoration: underline;
+        .project:hover, .timeline-item:hover {
+            background: #99ccff;
+        }
+        .timeline-item {
+            border-left: 4px solid #0066cc;
+            padding-left: 12px;
         }
     </style>
 </head>
 <body>
+    <div class="parallax-wrapper">
+        <div class="parallax-background"></div>
+        <div class="parallax-foreground"></div>
+    </div>
     <div class="container">
-        <h1>Caio Andrade Pariz</h1>
-        <p>Engenheiro de Controle e Automação, Desenvolvedor e Criador de Projetos Open Source.</p>
-        <p>Atualmente trabalhando no desenvolvimento de sistemas industriais, bots, aplicações móveis e ferramentas para automação.</p>
-        <p>Projetos em andamento: EchoCare, MotivApp, CoStory, AgroSystem e muito mais.</p>
-        
-        <div class="links">
-            <h3>Redes e Contato:</h3>
-            <a href="#">GitHub</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">YouTube</a>
+        <div class="name">Caio Andrade Pariz</div>
+        <div class="job">Engenheiro | Desenvolvedor | Gamer 🎮</div>
+        <p class="description">Profissional com experiência em desenvolvimento de software e automação industrial. Apaixonado por tecnologia, cultura geek e inovação.</p>
+        <div class="icons">
+            <i class="fab fa-github"></i>
+            <i class="fab fa-linkedin"></i>
+            <i class="fab fa-twitter"></i>
+        </div>
+    </div><div class="section">
+    <div class="section-title">Projetos Recentes</div>
+    <div class="projects">
+        <div class="project">🔹 EchoCare - Chatbot para suporte emocional</div>
+        <div class="project">🔹 MotivApp - Rede social de frases motivacionais</div>
+        <div class="project">🔹 CoStory - Plataforma para escrita colaborativa</div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="section-title">Experiência Profissional</div>
+    <div class="timeline">
+        <div class="timeline-item">
+            <strong>Engenheiro de Automação</strong> - Desenvolvimento de sistemas industriais inteligentes
+        </div>
+        <div class="timeline-item">
+            <strong>Desenvolvedor Full Stack</strong> - Criação de aplicações web e mobile
         </div>
     </div>
+</div>
+
+<div class="section">
+    <div class="section-title">Geek & Cultura Gamer</div>
+    <div class="icons">
+        <i class="fas fa-gamepad geek-icon"></i>
+        <i class="fas fa-dragon geek-icon"></i>
+        <i class="fas fa-robot geek-icon"></i>
+        <i class="fas fa-ghost geek-icon"></i>
+        <i class="fas fa-magic geek-icon"></i>
+    </div>
+</div>
+
 </body>
 </html>
